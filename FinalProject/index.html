@@ -10,31 +10,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles-smaller.css">
+
 </head>
 
 <body onload="localStorage.clear();">
     <nav>
-        <ul id="menu">
-            <li><a id="toggleMenu">&equiv;</a></li>
+        <ul id="menu" role="navigation">
+            <li><a id="toggleMenu" href="#" aria-label="Toggle Menu">&equiv;</a></li>
             <li><a href="index.html">Home</a></li>
             <li><a href="w01-task.html">W1 Task</a></li>
             <li><a href="w03-task.html">W3 Task</a></li>
             <li><a href="w04-task.html">W4 Task</a></li>
             <li><a href="w05-task.html">W5 Task</a></li>
-            <li><a href="project.html" class="active">Project</a></li>
+            <li><a href="project.html" class="active" aria-current="page">Project</a></li>
         </ul>
     </nav>
-    <main id="project">
+    <main id="project" role="main">
         <h1>Final Quiz</h1>
-        <form id="quiz-form">
-            <section id="quiz-container">
+        <form id="quiz-form" role="form">
+            <section id="quiz-container" aria-labelledby="quiz-heading">
+                <h2 id="quiz-heading" class="visually-hidden">Quiz Questions</h2>
                 <!-- Quiz questions dynamically inserted  -->
             </section>
             <div id="nav-buttons">
-                <input id="prev-input" type="button" value="Previous Question">
-                <input id="next-input" type="button" value="Next Question">
+                <input id="prev-input" type="button" value="Previous Question" aria-label="Previous question">
+                <input id="next-input" type="button" value="Next Question" aria-label="Next question">
             </div>
-            <input id="submit-input" type="submit" value="Grade Quiz">
+            <input id="submit-input" type="submit" value="Grade Quiz" aria-label="Submit quiz">
+
         </form>
     </main>
 
