@@ -96,7 +96,6 @@ function createGradedQuestionElement(questionData, userChoice, shuffledOptions, 
         optionElement.style.pointerEvents = 'none';
 
         optionElement.style.backgroundColor = 'rgb(176, 224, 230)';
-        questionElement.style.border = '1px solid black';
 
         if (userChoice) {
             if (option === questionData.answer) {
@@ -104,7 +103,6 @@ function createGradedQuestionElement(questionData, userChoice, shuffledOptions, 
             }
             if (option === userChoice && userChoice !== questionData.answer) {
                 optionElement.style.backgroundColor = 'coral';
-                questionElement.style.border = '2px solid red';
             }
         } else {
             if (option === questionData.answer) {
@@ -112,14 +110,20 @@ function createGradedQuestionElement(questionData, userChoice, shuffledOptions, 
             }
             if (option === "No Option Selected") {
                 optionElement.style.backgroundColor = 'coral';
-                questionElement.style.border = '2px solid red';
             }
         }
         if (optionElement.style.backgroundColor === 'rgb(176, 224, 230)') {
             optionElement.style.color = `rgb(0,0,0)`;
         }
-
     });
+
+    if (userChoice && userChoice !== questionData.answer) {
+        questionElement.style.border = '2px solid red';
+    } else if (!userChoice) {
+        questionElement.style.border = '2px solid red';
+    } else {
+        questionElement.style.border = '1px solid black';
+    }
 
     return questionElement;
 }
