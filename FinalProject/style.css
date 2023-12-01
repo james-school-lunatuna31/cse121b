@@ -116,6 +116,11 @@
     text-align: left;
 }
 
+#project .quiz-question h2 {
+    text-align: center;
+    padding-bottom: .25rem;
+}
+
 #project .option.correct {
     color: green;
 }
