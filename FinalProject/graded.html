@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE 121b | W04: Programming Tasks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="localStorage.clear();">
+    <nav>
+        <ul id="menu">
+            <li><a id="toggleMenu">&equiv;</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="w01-task.html">W1 Task</a></li>
+            <li><a href="w03-task.html">W3 Task</a></li>
+            <li><a href="w04-task.html">W4 Task</a></li>
+            <li><a href="w05-task.html">W5 Task</a></li>
+            <li><a href="project.html" class="active">Project</a></li>
+        </ul>
+    </nav>
+    <main id="project" class="graded">
+        <h1>Final Quiz Grade</h1>
+        <form id="quiz-form" action="index.html">
+            <section id="quiz-container">
+                <!-- Quiz questions dynamically inserted  -->
+            </section>
+            <div id="score-display"></div>
+
+            <input id="submit-input" type="submit" value="Return to Homepage">
+        </form>
+    </main>
+
+    <footer>
+        &copy;<span id="year"></span> | Final Project | CSE 121b
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+
+    <script src="utils.js"></script>
+    <script src="graded.js"></script>
+</body>
+
+</html>
