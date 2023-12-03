@@ -19,9 +19,15 @@
     box-shadow: 0px 0px 0.625rem rgba(0, 0, 0, 0.1);
 }
 
-#project #quiz-container,
+
+
+#project #quiz-container {
+    width: 100%;
+    margin: 2.5rem auto;
+}
+
 #project #nav-buttons {
-    max-width: 60%;
+    max-width: 80%;
     margin: 2.5rem auto;
 }
 
@@ -32,6 +38,7 @@
     align-items: stretch;
     margin-bottom: 1.25rem;
     gap: 1rem;
+    width: 100%;
 }
 
 #project #nav-buttons {
